@@ -40,11 +40,11 @@ for folder in "$PUBLIC_FOLDER"/*; do
             folder_size=$(du -sh "$folder" | awk '{print $1}')
             update_date=$(get_current_date)
 
-            # Comando SQL para realizar a atualização
+             # Comando SQL para realizar a atualização
             sql_command="UPDATE public.\"Companies\" 
-                         SET foldersize = '$folder_size', 
-                             numberfilefolder = '$num_files', 
-                             updatedatefolder = '$update_date' 
+                         SET \"folderSize\" = '$folder_size', 
+                             \"numberFileFolder\" = '$num_files', 
+                             \"updatedAtFolder\" = '$update_date' 
                          WHERE id = '$company_id';"
 
             # Executar o comando SQL utilizando psql
