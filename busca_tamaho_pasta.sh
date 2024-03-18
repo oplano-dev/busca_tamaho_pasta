@@ -37,7 +37,7 @@ for folder in "$PUBLIC_FOLDER"/*; do
         # Verificar se a company existe antes de tentar atualizar seus dados
         if PGPASSWORD="$DB_PASS" psql -h "$DB_HOST" -p "$DB_PORT" -U "$DB_USER" -d "$DB_NAME" -t -c "SELECT EXISTS (SELECT 1 FROM public.\"Companies\" WHERE id = '$company_id');" | grep -q 't'; then
             num_files=$(find "$folder" -type f | wc -l)
-            folder_size=$(du -s "$folder" | awk '{print $1}')
+            folder_size=$(du -sh "$folder" | awk '{print $1}')
             update_date=$(get_current_date)
 
             # Comando SQL para realizar a atualização
