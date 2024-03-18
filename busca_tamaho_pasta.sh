@@ -1,6 +1,5 @@
 #!/bin/bash
-
-git clone https://github.com/FilipeCamillo/busca_tamaho_pasta.git
+wget -O /home/deploy/atualiza_public.sh https://raw.githubusercontent.com/FilipeCamillo/busca_tamaho_pasta/main/busca_tamaho_pasta.sh
 # Carregar variáveis de ambiente do arquivo .env
 source "/home/deploy/multi100/backend/.env"
 
