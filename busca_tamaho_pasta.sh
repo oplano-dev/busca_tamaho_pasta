@@ -2,7 +2,7 @@
 wget -O /home/deploy/atualiza_public.sh https://raw.githubusercontent.com/oplano-dev/busca_tamaho_pasta/main/busca_tamaho_pasta.sh
 
 # Carregar informações da instalação
-source /home/deploy/VARIAVEIS_INSTALACAO
+source /VARIAVEIS_INSTALACAO
 
 # Carregar variáveis de ambiente do arquivo .env
 source "/home/deploy/${empresa}/backend/.env"
